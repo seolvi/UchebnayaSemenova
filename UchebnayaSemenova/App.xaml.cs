@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using UchebnayaSemenova.Bases;
 
 namespace UchebnayaSemenova
 {
@@ -13,5 +14,7 @@ namespace UchebnayaSemenova
     /// </summary>
     public partial class App : Application
     {
+        public static UchebnayaSemenovaEntities db = new UchebnayaSemenovaEntities();
+        public static bool isAdmin = false;
     }
 }

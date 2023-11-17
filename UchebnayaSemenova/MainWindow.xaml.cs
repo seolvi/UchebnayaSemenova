@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using UchebnayaSemenova.Bases;
+using UchebnayaSemenova.Pages;
 namespace UchebnayaSemenova
 {
     /// <summary>
@@ -23,6 +24,18 @@ namespace UchebnayaSemenova
         public MainWindow()
         {
             InitializeComponent();
+            Navigation.mainWindow = this;
+            Navigation.NextPage(new PageComponent("Авторизация", new AuthorizatePage()));
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

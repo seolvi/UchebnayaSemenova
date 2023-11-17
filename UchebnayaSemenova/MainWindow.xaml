@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="318*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#d0bdf4"/>
+        <Rectangle Grid.Row="1" Fill=" #e5eaf5"/> 
+        <Rectangle Grid.Row="2" Fill="#d0bdf4"/>
+        <Label Grid.Row="0" Content="ktits.tatar" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Row="1"></Frame>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="10" Orientation="Horizontal">
+            <Button x:Name="ExitBtn" Background="#e5eaf5" Height="22" Width="67" FontFamily="Arial Black" Click="ExitBtn_Click">Выход</Button>
+            <Button x:Name="BackBtn" Background="#e5eaf5" Height="22" Width="67" FontFamily="Arial Black" Click="BackBtn_Click">Назад</Button>
+        </StackPanel>
+
+
     </Grid>
 </Window>
