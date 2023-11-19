@@ -13,10 +13,10 @@ namespace UchebnayaSemenova.Bases
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UchebnayaSemenovaEntities : DbContext
+    public partial class UchebnayaSemenovaEntities1 : DbContext
     {
-        public UchebnayaSemenovaEntities()
-            : base("name=UchebnayaSemenovaEntities")
+        public UchebnayaSemenovaEntities1()
+            : base("name=UchebnayaSemenovaEntities1")
         {
         }
     
@@ -34,6 +34,5 @@ namespace UchebnayaSemenova.Bases
         public virtual DbSet<Specs> Specs { get; set; }
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

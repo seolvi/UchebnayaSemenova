@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UchebnayaSemenova.Bases;
 
 namespace UchebnayaSemenova.Pages
 {
@@ -24,5 +25,24 @@ namespace UchebnayaSemenova.Pages
         {
             InitializeComponent();
         }
+
+        private void EnterBtn_Click(object sender, RoutedEventArgs e)
+        {
+                if (App.db.Employee.Where(x => x.Id_Employee.ToString() == InputTB.Text).FirstOrDefault() != null)
+                {
+                    App.isEmployee = true;
+                    MessageBox.Show("Добро пожаловать, админ!");
+
+                }
+                else if (App.db.Student.Where(x => x.Id_Student.ToString() == InputTB.Text).FirstOrDefault() != null)
+                {
+                    App.isStudent = true;
+                    MessageBox.Show("Добро пожаловать, студент!");
+                    Navigation.NextPage(new PageComponent("Студент", new StudentPage()));
+                }
+                else
+                    MessageBox.Show("Нет пользователся с таким номером");
+            }
+        }
     }
-}
+
