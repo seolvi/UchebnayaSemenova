@@ -1,0 +1,22 @@
+﻿<Page x:Class="UchebnayaSemenova.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UchebnayaSemenova.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="318" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="ArialBlack">Списки</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StudentBTN" Click="StudentBTN_Click" Width="85" Background="#d0bdf4" FontSize="16">Студенты</Button>
+                <Button x:Name="ExamBTN" Click="ExamBTN_Click" Width="85" Background="#d0bdf4" FontSize="16">Экзамены</Button>
+                <Button x:Name="EmployeeBTN" Click="EmployeeBTN_Click" Width="95" Background="#d0bdf4" FontSize="16">Сотрудники</Button>
+                <Button x:Name="DisciplineBTN" Click="DisciplinesTN_Click"  Width="100" Background="#d0bdf4" FontSize="16">Дисциплины</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
