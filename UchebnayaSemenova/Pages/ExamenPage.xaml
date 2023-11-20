@@ -1,4 +1,4 @@
-﻿<Page x:Class="UchebnayaSemenova.Pages.EmployeePage"
+﻿<Page x:Class="UchebnayaSemenova.Pages.ExamenPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:UchebnayaSemenova.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="318" d:DesignWidth="800"
-      Title="EmployeePage">
+      Title="ExamenPage">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,10 +23,12 @@
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <Label Content="З/П" FontFamily="ArialBlack" FontSize="15" Width="44"/>
+                <Label Content="Оценки" FontFamily="ArialBlack" FontSize="15" Width="70" HorizontalAlignment="Left"></Label>
                 <ComboBox Width="120" x:Name="FiltrList">
-                    <ComboBoxItem Content="Больше 30.тыс"></ComboBoxItem>
-                    <ComboBoxItem Content="Меньше 30.тыс"></ComboBoxItem>
+                    <ComboBoxItem Content="5"></ComboBoxItem>
+                    <ComboBoxItem Content="4"></ComboBoxItem>
+                    <ComboBoxItem Content="3"></ComboBoxItem>
+                    <ComboBoxItem Content="2"></ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -36,16 +38,15 @@
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
         </StackPanel>
         <StackPanel Background="#e5eaf5" Grid.Row="1">
-            <ListView Width="800" x:Name="EmployeeP">
+            <ListView Width="800" x:Name="ExamenP">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Employee.Id_Employee}" x:Name="IdColumn" Width="50"></GridViewColumn>
-                        <GridViewColumn Header="Преподаватель" DisplayMemberBinding="{Binding Employee.Surname}" x:Name="TeacherColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Кафедра" DisplayMemberBinding="{Binding Lectern.Name_Lectern}" x:Name="KafedraColumn" Width="165"></GridViewColumn>
-                        <GridViewColumn Header="Должность" DisplayMemberBinding="{Binding Position.Position}" x:Name="PositionColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Стаж" DisplayMemberBinding="{Binding Employee.Stage}" x:Name="EmplColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Звание" DisplayMemberBinding="{Binding Degree.Degree}" x:Name="DegColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Оклад" DisplayMemberBinding="{Binding Employee.Salary}" x:Name="SalaryColumn" Width="120"></GridViewColumn>
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Date_Exam}" x:Name="DateColumn" Width="70"></GridViewColumn>
+                        <GridViewColumn Header="Дисциплина" DisplayMemberBinding="{Binding Subject.Name_Subject}" x:Name="SubjectColumn" Width="130"></GridViewColumn>
+                        <GridViewColumn Header="Преподаватель" DisplayMemberBinding="{Binding Employee.Surname}" x:Name="TeacherColumn" Width="130"></GridViewColumn>
+                        <GridViewColumn Header="Аудитория" DisplayMemberBinding="{Binding Auditory}" x:Name="AuditoryColumn" Width="130"></GridViewColumn>
+                        <GridViewColumn Header="Студент" DisplayMemberBinding="{Binding Student.Surname_Student}" x:Name="StudentColumn" Width="130"></GridViewColumn>
+                        <GridViewColumn Header="Оценка" DisplayMemberBinding="{Binding Mark}" x:Name="MarkColumn" Width="130"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>

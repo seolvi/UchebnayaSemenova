@@ -14,7 +14,7 @@ namespace UchebnayaSemenova
     /// </summary>
     public partial class App : Application
     {
-        public static UchebnayaSemenovaEntities db = new UchebnayaSemenovaEntities();
+        public static UchebnayaSemenovaEntities1 db = new UchebnayaSemenovaEntities1();
         public static bool isAdmin = false;
         internal static bool isEmployee;
         internal static bool isStudent;

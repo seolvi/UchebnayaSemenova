@@ -583,7 +583,7 @@
           <End Role="Specs" Type="Self.Specs" Multiplicity="*" />
           <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="UchebnayaSemenovaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UchebnayaSemenovaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Degree" EntityType="Self.Degree" />
           <EntitySet Name="Employee" EntityType="Self.Employee" />
           <EntitySet Name="Examen" EntityType="Self.Examen" />
@@ -648,7 +648,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище UchebnayaSemenovaModelContainer" CdmEntityContainer="UchebnayaSemenovaEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище UchebnayaSemenovaModelContainer" CdmEntityContainer="UchebnayaSemenovaEntities1">
           <EntitySetMapping Name="Degree">
             <EntityTypeMapping TypeName="UchebnayaSemenovaModel.Degree">
               <MappingFragment StoreEntitySet="Degree">

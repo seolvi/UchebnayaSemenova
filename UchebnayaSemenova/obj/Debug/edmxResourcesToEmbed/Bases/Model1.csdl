@@ -252,7 +252,7 @@
     <End Role="Specs" Type="Self.Specs" Multiplicity="*" />
     <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="UchebnayaSemenovaEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="UchebnayaSemenovaEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Degree" EntityType="Self.Degree" />
     <EntitySet Name="Employee" EntityType="Self.Employee" />
     <EntitySet Name="Examen" EntityType="Self.Examen" />

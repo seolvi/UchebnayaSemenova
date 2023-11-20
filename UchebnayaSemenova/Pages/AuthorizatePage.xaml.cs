@@ -35,12 +35,14 @@ namespace UchebnayaSemenova.Pages
             if (emp != null)
             {
                 App.isEmployee = true;
-                MessageBox.Show("Добро пожаловать админ!");
+                MessageBox.Show("Добро пожаловать, преподаватель!");
+                Navigation.NextPage(new PageComponent("Препод", new DisciplinePage()));
             }
             else if (stu != null)
             {
                 App.isStudent = true;
                 MessageBox.Show("Добро пожаловать, студент!");
+                Navigation.NextPage(new PageComponent("Студент", new StudentPage()));
             }
             else
                 MessageBox.Show("Нет пользователся с таким номером");

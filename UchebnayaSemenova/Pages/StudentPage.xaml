@@ -5,10 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UchebnayaSemenova.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="480" d:DesignWidth="800"
+      d:DesignHeight="318" d:DesignWidth="800"
       Title="StudentPage">
 
     <Grid>
-         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#d0bdf4" Grid.Row="0" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Сорт" FontFamily="ArialBlack" FontSize="15" Width="55" Margin="10 0"/>
+                <ComboBox Width="120" x:Name="SortList" SelectionChanged="SortList_SelectionChanged">
+                    <ComboBoxItem Content="По возрастанию"/>
+                    <ComboBoxItem Content="По убыванию"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Оценки" FontFamily="ArialBlack" FontSize="15" Width="70" HorizontalAlignment="Left"></Label>
+                <ComboBox Width="120" x:Name="FiltrList">
+                    <ComboBoxItem Content="5"></ComboBoxItem>
+                    <ComboBoxItem Content="4"></ComboBoxItem>
+                    <ComboBoxItem Content="3"></ComboBoxItem>
+                    <ComboBoxItem Content="2"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Поиск" FontFamily="ArialBlack" FontSize="15" Width="70"/>
+                <TextBox Width="120" x:Name="SearchTb"></TextBox>
+            </StackPanel>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
+        </StackPanel>
+        <StackPanel Background="#e5eaf5" Grid.Row="1">
+            <ListView Width="800" x:Name="StudentP">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="№" DisplayMemberBinding="{Binding Id_Student}" Width="30"></GridViewColumn>
+                        <GridViewColumn Header="Студент" DisplayMemberBinding="{Binding Student.Surname_Student}" x:Name="StudentColumn" Width="130"></GridViewColumn>
+                        <GridViewColumn Header="Дисциплина" DisplayMemberBinding="{Binding Subject.Name_Subject}" x:Name="DiciplineColumn" Width="150"></GridViewColumn>
+                        <GridViewColumn Header="Оценка" DisplayMemberBinding="{Binding Mark}" x:Name="MarkColumn" Width="150"></GridViewColumn>
+                        <GridViewColumn Header="Дата экзамена" DisplayMemberBinding="{Binding Date_Examen}" x:Name="DateColumn" Width="150"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>

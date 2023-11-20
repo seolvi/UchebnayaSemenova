@@ -13,10 +13,10 @@ namespace UchebnayaSemenova.Bases
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UchebnayaSemenovaEntities : DbContext
+    public partial class UchebnayaSemenovaEntities1 : DbContext
     {
-        public UchebnayaSemenovaEntities()
-            : base("name=UchebnayaSemenovaEntities")
+        public UchebnayaSemenovaEntities1()
+            : base("name=UchebnayaSemenovaEntities1")
         {
         }
     

@@ -12,23 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UchebnayaSemenova.Bases;
 
 namespace UchebnayaSemenova.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для StudentPage.xaml
+    /// Логика взаимодействия для DisciplinePage.xaml
     /// </summary>
-    public partial class StudentPage : Page
+    public partial class DisciplinePage : Page
     {
-        public StudentPage()
+        public DisciplinePage()
         {
             InitializeComponent();
-            StudentP.ItemsSource = App.db.Examen.ToList();
-        }
-
-        private void SortList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            DisciplineP.ItemsSource = App.db.Subject.ToList();
         }
     }
 }

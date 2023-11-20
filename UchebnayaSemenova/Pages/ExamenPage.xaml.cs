@@ -16,19 +16,14 @@ using System.Windows.Shapes;
 namespace UchebnayaSemenova.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для StudentPage.xaml
+    /// Логика взаимодействия для ExamenPage.xaml
     /// </summary>
-    public partial class StudentPage : Page
+    public partial class ExamenPage : Page
     {
-        public StudentPage()
+        public ExamenPage()
         {
             InitializeComponent();
-            StudentP.ItemsSource = App.db.Examen.ToList();
-        }
-
-        private void SortList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            ExamenP.ItemsSource = App.db.Examen.ToList();
         }
     }
 }
