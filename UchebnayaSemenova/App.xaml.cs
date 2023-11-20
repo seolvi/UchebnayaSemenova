@@ -16,8 +16,8 @@ namespace UchebnayaSemenova
     {
         public static UchebnayaSemenovaEntities1 db = new UchebnayaSemenovaEntities1();
         public static bool isAdmin = false;
-        internal static bool isEmployee;
-        internal static bool isStudent;
+        public static bool isStudent = false;
+        public static bool isPrepodovatel = false;
 
 
         public static object DataBase { get; internal set; }

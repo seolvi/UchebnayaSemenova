@@ -61,3 +61,5 @@ C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\P
 C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\Pages\ExamenPage.baml
 C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\Pages\DisciplinePage.g.cs
 C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\Pages\DisciplinePage.baml
+C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\Pages\MenuPage.g.cs
+C:\Users\Олеся\source\repos\UchebnayaSemenova\UchebnayaSemenova\obj\Debug\Pages\MenuPage.baml

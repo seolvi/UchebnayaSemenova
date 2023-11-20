@@ -30,19 +30,25 @@ namespace UchebnayaSemenova.Pages
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            var emp = App.db.Employee.Where(x => x.Id_Employee.ToString() == InputTB.Text).FirstOrDefault();
-            var stu = App.db.Student.Where(x => x.Id_Student.ToString() == InputTB.Text).FirstOrDefault();
+            var emp = App.db.Employee.Where(x => x.Id_Employee.ToString() == PasswordPb.Password).FirstOrDefault();
+            var stu = App.db.Student.Where(x => x.Id_Student.ToString() == PasswordPb.Password).FirstOrDefault();
             if (emp != null)
             {
-                App.isEmployee = true;
+                App.isPrepodovatel = true;
                 MessageBox.Show("Добро пожаловать, преподаватель!");
-                Navigation.NextPage(new PageComponent("Препод", new DisciplinePage()));
+                Navigation.NextPage(new PageComponent("Препод", new ExamenPage()));
             }
             else if (stu != null)
             {
                 App.isStudent = true;
                 MessageBox.Show("Добро пожаловать, студент!");
                 Navigation.NextPage(new PageComponent("Студент", new StudentPage()));
+            }
+            else if (PasswordPb.Password == "1718")
+            {
+                App.isAdmin = true;
+                MessageBox.Show("Добро пожаловать, админ!");
+                Navigation.NextPage(new PageComponent("Админская", new MenuPage()));
             }
             else
                 MessageBox.Show("Нет пользователся с таким номером");

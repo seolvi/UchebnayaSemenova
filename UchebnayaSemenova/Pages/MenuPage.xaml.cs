@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UchebnayaSemenova.Bases;
 
 namespace UchebnayaSemenova.Pages
 {
@@ -23,6 +24,26 @@ namespace UchebnayaSemenova.Pages
         public MenuPage()
         {
             InitializeComponent();
+        }
+
+        private void StudentBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("Студенты", new StudentPage()));
+        }
+
+        private void ExamBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("Экзамены", new ExamenPage()));
+        }
+
+        private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("Сотрудники", new EmployeePage()));
+        }
+
+        private void DisciplineBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("Дисциплина", new DisciplinePage()));
         }
     }
 }

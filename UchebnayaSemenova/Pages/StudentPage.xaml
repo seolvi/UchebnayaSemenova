@@ -35,10 +35,10 @@
                 <Label Content="Поиск" FontFamily="ArialBlack" FontSize="15" Width="70"/>
                 <TextBox Width="120" x:Name="SearchTb"></TextBox>
             </StackPanel>
-            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
+            <Button x:Name="AddBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
         </StackPanel>
-        <StackPanel Background="#e5eaf5" Grid.Row="1">
-            <ListView Width="800" x:Name="StudentP">
+        <StackPanel  Grid.Row="1">
+            <ListView Background="#e5eaf5" Width="800" x:Name="StudentP" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="212">>
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="№" DisplayMemberBinding="{Binding Id_Student}" Width="30"></GridViewColumn>

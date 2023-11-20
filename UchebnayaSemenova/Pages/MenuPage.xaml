@@ -12,10 +12,10 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
             <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="ArialBlack">Списки</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="StudentBTN" Click="StudentBTN_Click" Width="85" Background="#d0bdf4" FontSize="16">Студенты</Button>
-                <Button x:Name="ExamBTN" Click="ExamBTN_Click" Width="85" Background="#d0bdf4" FontSize="16">Экзамены</Button>
-                <Button x:Name="EmployeeBTN" Click="EmployeeBTN_Click" Width="95" Background="#d0bdf4" FontSize="16">Сотрудники</Button>
-                <Button x:Name="DisciplineBTN" Click="DisciplinesTN_Click"  Width="100" Background="#d0bdf4" FontSize="16">Дисциплины</Button>
+                <Button x:Name="StudentBTN"  Width="85" Background="#d0bdf4" FontSize="16" Click="StudentBTN_Click">Студенты</Button>
+                <Button x:Name="ExamBTN"  Width="85" Background="#d0bdf4" FontSize="16" Click="ExamBTN_Click">Экзамены</Button>
+                <Button x:Name="EmployeeBTN" Width="95" Background="#d0bdf4" FontSize="16" Click="EmployeeBTN_Click">Сотрудники</Button>
+                <Button x:Name="DisciplineBTN"  Width="100" Background="#d0bdf4" FontSize="16" Click="DisciplineBTN_Click">Дисциплины</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

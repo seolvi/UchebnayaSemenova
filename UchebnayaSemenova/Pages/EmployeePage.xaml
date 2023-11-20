@@ -35,17 +35,15 @@
             </StackPanel>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
         </StackPanel>
-        <StackPanel Background="#e5eaf5" Grid.Row="1">
-            <ListView Width="800" x:Name="EmployeeP">
+        <StackPanel  Grid.Row="1">
+            <ListView Background="#e5eaf5" Width="800" x:Name="EmployeeP" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="212">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Employee.Id_Employee}" x:Name="IdColumn" Width="50"></GridViewColumn>
-                        <GridViewColumn Header="Преподаватель" DisplayMemberBinding="{Binding Employee.Surname}" x:Name="TeacherColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Кафедра" DisplayMemberBinding="{Binding Lectern.Name_Lectern}" x:Name="KafedraColumn" Width="165"></GridViewColumn>
-                        <GridViewColumn Header="Должность" DisplayMemberBinding="{Binding Position.Position}" x:Name="PositionColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Стаж" DisplayMemberBinding="{Binding Employee.Stage}" x:Name="EmplColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Звание" DisplayMemberBinding="{Binding Degree.Degree}" x:Name="DegColumn" Width="120"></GridViewColumn>
-                        <GridViewColumn Header="Оклад" DisplayMemberBinding="{Binding Employee.Salary}" x:Name="SalaryColumn" Width="120"></GridViewColumn>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id_Employee}" x:Name="IdColumn" Width="50"></GridViewColumn>
+                        <GridViewColumn Header="Преподаватель" DisplayMemberBinding="{Binding Surname}" x:Name="TeacherColumn" Width="150"></GridViewColumn>
+                        <GridViewColumn Header="Кафедра" DisplayMemberBinding="{Binding Lectern.Name_Lectern}" x:Name="KafedraColumn" Width="190"></GridViewColumn>
+                        <GridViewColumn Header="Стаж" DisplayMemberBinding="{Binding Stage}" x:Name="EmplColumn" Width="120"></GridViewColumn>
+                        <GridViewColumn Header="Оклад" DisplayMemberBinding="{Binding Salary}" x:Name="SalaryColumn" Width="120"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>

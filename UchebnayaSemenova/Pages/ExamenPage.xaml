@@ -37,8 +37,8 @@
             </StackPanel>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="30" Margin="30,0,0,0" Content="Добавить"></Button>
         </StackPanel>
-        <StackPanel Background="#e5eaf5" Grid.Row="1">
-            <ListView Width="800" x:Name="ExamenP">
+        <StackPanel  Grid.Row="1">
+            <ListView Background="#e5eaf5" Width="800" x:Name="ExamenP" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="212">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Date_Exam}" x:Name="DateColumn" Width="70"></GridViewColumn>

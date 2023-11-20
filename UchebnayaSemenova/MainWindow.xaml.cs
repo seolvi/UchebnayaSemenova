@@ -30,12 +30,14 @@ namespace UchebnayaSemenova
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            Navigation.ClearHistory();
+            Navigation.NextPage(new PageComponent("Авторизация", new AuthorizatePage()));
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Navigation.BackPage();
         }
+
     }
 }
